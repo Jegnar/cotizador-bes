@@ -84,15 +84,17 @@ export function ResultadoBox({ resultado }: ResultadoBoxProps) {
       </div>
     `;
 
-   const opciones = {
+    const opciones = {
       margin:       15,
       filename:     `Propuesta_Comercial_BES_${nombreArchivo}.pdf`,
       image:        { type: 'jpeg', quality: 0.98 },
       html2canvas:  { scale: 2, logging: false, useCORS: true, backgroundColor: '#1c1c1e' },
       jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
-    } as const; // <-- El "as const;" va aquí, cerrando el objeto opciones
+    } as const;
 
-  }; // <-- Esta llave cierra la función descargarPDF (Línea 94)
+    html2pdf().from(element).set(opciones).save();
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.resultadoBox}>
@@ -143,7 +145,7 @@ export function ResultadoBox({ resultado }: ResultadoBoxProps) {
         </div>
 
         <p className={styles.notaEstimado}>
-          *Los valores son estimados. Un asesor de BES se pondrá en contacto contigo para realizar un diseño y presupuesto definitivo a la medida de tu techo.
+          *Los valores son estimados. Un asesor de BES se pondrá en contacto contigo para realizar un design y presupuesto definitivo a la medida de tu techo.
         </p>
       </div>
 
