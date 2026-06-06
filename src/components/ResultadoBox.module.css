@@ -1,0 +1,120 @@
+/* Contenedor principal de la sección en la Web */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  background-color: #1c1c1e; /* Fondo general de la app menos gris claro y más premium */
+  padding: 16px;
+  border-radius: 16px;
+}
+
+/* Cada sección ahora tiene un layout gris oscuro uniforme */
+.resultadoBox {
+  background-color: #2c2c2e; /* Gris oscuro idéntico para todas las secciones */
+  border: 1px solid #3a3a3c;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.resultadoTitle {
+  font-size: 19px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 24px 0;
+  text-align: left;
+  border-bottom: 1px solid #3a3a3c;
+  padding-bottom: 12px;
+}
+
+/* Etiquetas de los bloques (Consumo, Sistema, etc.) */
+.sectionLabel {
+  color: #007aff; /* Azul eléctrico sutil para resaltar secciones */
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin: 24px 0 10px 0;
+  text-align: left;
+}
+
+.sectionLabel:first-of-type {
+  margin-top: 0;
+}
+
+/* Filas alineadas perfectamente a los extremos */
+.resultadoRow {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 14px 0 !important;
+  width: 100%;
+}
+
+.resultadoRow:last-of-type {
+  border-bottom: none;
+}
+
+.rowLabel {
+  color: #ebebf5;
+  font-size: 14px;
+}
+
+.rowValor {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: right;
+}
+
+/* Resaltados en Azul Marino / Eléctrico para datos clave */
+.valorMarino {
+  color: #0a84ff !important; 
+  font-weight: 700;
+  font-size: 14px;
+  text-align: right;
+}
+
+.valorAhorro {
+  color: #30d158 !important; /* Verde éxito para el ahorro, resalta cabrón */
+  font-weight: 700;
+  font-size: 16px;
+  text-align: right;
+}
+
+.notaEstimado {
+  color: #8e8e93;
+  font-size: 11px;
+  text-align: center;
+  margin-top: 24px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* Botón de descarga blanco abajo */
+.btnDescargar {
+  width: 100%;
+  background-color: #ffffff;
+  color: #1c1c1e;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+.btnDescargar:hover {
+  background-color: #0a84ff;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(10, 132, 255, 0.3);
+}
